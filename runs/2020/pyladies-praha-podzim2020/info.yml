@@ -1,10 +1,10 @@
 title: Začátečnický kurz PyLadies
-subtitle: Praha (Barclays) - jaro 2020
+subtitle: Praha - podzim 2020
 time: 18:00 - 20:00
 default_time:
   start: '18:00'
   end: '20:00'
-place:  Barclays, Na Pankráci 1683/127, Praha 4
+place: Praha
 description: Naučte se Python vážně od začátku. Žádné předchozí znalosti nejsou potřeba.
 long_description: |
     Tady najdeš všechny materiály k pražské verzi začátečnického kurzu PyLadies. Stránky samotných PyLadies jsou na https://pyladies.cz. Jednotlivé lekce jsou určeny naprostým začátečnicím. Instrukce jsou uvedeny pro operační systémy Linux, Windows i macOS.
@@ -25,7 +25,7 @@ plan:
 
 - title: První program
   slug: first-program
-  date: 2020-03-04
+  date: 2020-09-16
   materials:
     - title: Úvodní prezentace
       url: http://pyladies.cz/v1/s001-install/uvod-praha.html
@@ -48,7 +48,7 @@ plan:
       type: cheatsheet
 - title: Proměnné a podmínky
   slug: variables-ifs
-  date: 2020-03-11
+  date: 2020-09-23
   materials:
     - lesson: beginners/print
       type: lesson
@@ -62,7 +62,7 @@ plan:
         bonus: true
 - base: loops
   title: Funkce a cyklus For
-  date: 2020-03-18
+  date: 2020-09-30
   materials:
     - lesson: beginners/functions
       type: lesson
@@ -76,19 +76,19 @@ plan:
       type: cheatsheet
 - slug: while-functions
   title: While & Opakování cyklů
-  date: 2020-03-25
+  date: 2020-10-07
   materials:
     - lesson: beginners/while
       type: lesson
 - slug: def
   title: Vlastní funkce
-  date: 2020-04-01
+  date: 2020-10-14
   materials:
     - lesson: beginners/def
       type: lesson
 - slug: strings
   title: Řetězce
-  date: 2020-04-08
+  date: 2020-10-21
   materials:
     - lesson: beginners/str
       type: lesson
@@ -99,7 +99,7 @@ plan:
       type: cheatsheet
 - slug: practice
   title: Procvičování & soubory
-  date: 2020-04-15
+  date: 2020-10-29
   materials:
     - title: Procvičíme si vše, co jsme se naučily
       url: null
@@ -107,9 +107,9 @@ plan:
     - lesson: beginners/files
       type: lesson
 - base: list
-  date: 2020-04-22
+  date: 2020-11-04
 - base: dict
-  date: 2020-04-29
+  date: 2020-11-11
   materials:
     - lesson: beginners/dict
       type: lesson
@@ -118,7 +118,7 @@ plan:
       type: cheatsheet
 - slug: tests
   title: Výjimky, moduly
-  date: 2020-05-06
+  date: 2020-11-18
   materials:
     - lesson: beginners/exceptions
     - lesson: beginners/modules
@@ -128,7 +128,7 @@ plan:
       type: cheatsheet
 - base: class
   title: Opakování & Třídy I
-  date: 2020-05-13
+  date: 2020-11-25
   materials:
     - lesson: beginners/class
       type: lesson
@@ -137,15 +137,14 @@ plan:
       type: cheatsheet
 - slug: inheritance
   title: Třídy II & Dědičnost
-  date: 2020-05-20
+  date: 2020-12-02
   materials:
     - lesson: beginners/inheritance
       type: lesson
 - base: pyglet
-  date: 2020-05-27
+  date: 2020-12-09
 - slug: hackaton
-  title: Závěrečný hackaton
-  date: 2020-05-30
+  title: Závěrečný projekt
   materials:
     - lesson: projects/asteroids
       type: lesson
