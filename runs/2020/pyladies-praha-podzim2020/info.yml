@@ -60,6 +60,10 @@ plan:
       lesson: beginners/and-or
       vars:
         bonus: true
+    - title: Tahák na běžné chyby a chybové hlášky (PDF)
+      url: https://pyvec.github.io/cheatsheets/errors/errors-cs.pdf
+      type: cheatsheet
+
 - base: loops
   title: Funkce a cyklus For
   date: 2020-09-30
