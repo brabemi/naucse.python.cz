@@ -110,6 +110,8 @@ plan:
       type: special
     - lesson: beginners/files
       type: lesson
+    - lesson: training/middle
+      type: lesson
 - base: list
   date: 2020-11-04
 - base: dict
