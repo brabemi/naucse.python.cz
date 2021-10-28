@@ -34,7 +34,7 @@ se teď seznámíme.
 > Budeme hodně pracovat s příkazovou řádkou.
 > Jestli se s ní ještě nekamarádíš, koukni se na
 > [úvod]({{ lesson_url('beginners/cmdline') }}).
->
+> 
 > Nezapomeň: `$` na začátku se nepíše;
 > je tu proto, aby šlo poznat že jde o příkaz.
 
@@ -56,7 +56,7 @@ pomocí příkazu `git init`:
 
 ```ansi
 ␛[36m$␛[0m git init
-Initialized empty Git repository in .../.git/
+Initialized empty Git repository in ./.git/
 ```
 
 Na první pohled to vypadá, že se nic nestalo.
@@ -74,13 +74,13 @@ vypisuje informace o stavu repozitáře:
 ␛[36m$␛[0m git status
 On branch master
 
-No commits yet
+Initial commit
 
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
 *„On branch master”* říká něco o větvích, k tomu se vrátíme později.
-*„No commits yet”* říká, že zatím nemáš uloženou žádnou revizi.
+*„Initial commit”* říká, že zatím nemáš uloženou žádnou revizi.
 A *„nothing to commit”* říká, že je adresář
 prázdný – nejsou tu žádné soubory k verzování.
 
@@ -101,11 +101,12 @@ Pak zkus znovu `git status`: Git oznámí,
 ␛[36m$␛[0m git status
 On branch master
 
-No commits yet
+Initial commit
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-	␛[31mbasnicka.txt␛[m
+
+        ␛[31mbasnicka.txt␛[m
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -124,11 +125,12 @@ a znovu zkontroluj stav repozitáře:
 ␛[36m$␛[0m git status
 On branch master
 
-No commits yet
+Initial commit
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
-	␛[32mnew file:   basnicka.txt␛[m
+
+        ␛[32mnew file:   basnicka.txt␛[m
 
 ```
 
@@ -139,7 +141,7 @@ Pojď tedy vytvořit revizi:
 
 ```ansi
 ␛[36m$␛[0m git commit
-[master (root-commit) eb0fcd9] První revize
+[master (root-commit) 1a009f4] První revize
  1 file changed, 6 insertions(+)
  create mode 100644 basnicka.txt
 ```
@@ -194,9 +196,9 @@ To ti poví příkaz `git show`:
 
 ```ansi
 ␛[36m$␛[0m git show
-␛[33mcommit eb0fcd9317cbba3d9406ffe2918dfaad667f100f␛[m
+␛[33mcommit 1a009f4267d5a6ab7ece87cb7514f5b803692e39␛[m
 Author: Adéla Novotná <adela.novotna@example.cz>
-Date:   Mon May 18 16:18:40 2020 +0200
+Date:   Mon Mar 20 14:51:34 2017 +0100
 
     První revize
 
@@ -235,7 +237,7 @@ s nějakým <span class="green">obsahem</span>.
 > > set LC_ALL=C.UTF-8
 > ```
 >
-> Tento příkaz nastaví aktuální terminál: když si otevřeš nové okno
+> Tento příkaz nastaví aktuální terminál: když si ovevřeš nové okno
 > s příkazovou řádkou, bude ho potřeba zadat znovu.
 
 
@@ -250,8 +252,9 @@ Pak se opět zeptej Gitu na stav repozitáře.
 On branch master
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	␛[31mmodified:   basnicka.txt␛[m
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        ␛[31mmodified:   basnicka.txt␛[m
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -315,10 +318,12 @@ A pro úplnost se znovu koukni, co říká
 revize.
 
 ```ansi
+␛[36m$␛[0m git status
 On branch master
 Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	␛[32mmodified:   basnicka.txt␛[m
+  (use "git reset HEAD <file>..." to unstage)
+
+        ␛[32mmodified:   basnicka.txt␛[m
 
 ```
 
@@ -341,8 +346,8 @@ Můj popisek bude znít takhle:
 Rozdělení dlouhých řádků
 
 Verše básně se většinou píšou na jednotlivé řádky. Myslím, že
-takhle se to líp čte. (Ale, co si budeme povídat, hlavní
-důvod je ukázat co dělá git diff.)
+takhle se to líp čte. (Ale co si budeme povídat, hlavní 
+důvod je ukázat, co dělá git diff.)
 ```
 
 > [note]
@@ -357,15 +362,15 @@ Pak ji zkontroluj:
 
 ```ansi
 ␛[36m$␛[0m git show
-␛[33mcommit 1fcd654a331f290616c948d9841fd8d2a34aa6b4␛[m
+␛[33mcommit 81cbabb3bd3cd2f3896dd41b20012c44dbd69031␛[m
 Author: Adéla Novotná <adela.novotna@example.cz>
-Date:   Mon May 18 16:18:40 2020 +0200
+Date:   Mon Mar 20 14:51:34 2017 +0100
 
     Rozdělení dlouhých řádků
-
+    
     Verše básně se většinou píšou na jednotlivé řádky. Myslím, že
-    takhle se to líp čte. (Ale, co si budeme povídat, hlavní
-    důvod je ukázat co dělá git diff.)
+    takhle se to líp čte. (Ale co si budeme povídat, hlavní
+    důvod je ukázat, co dělá git diff.)
 
 ␛[1mdiff --git a/basnicka.txt b/basnicka.txt␛[m
 ␛[1mindex 558d133..24e2384 100644␛[m
@@ -404,19 +409,19 @@ První z nich je <code>git log</code>.
 
 ```ansi
 ␛[36m$␛[0m git log
-␛[33mcommit 1fcd654a331f290616c948d9841fd8d2a34aa6b4␛[m
+␛[33mcommit 81cbabb3bd3cd2f3896dd41b20012c44dbd69031␛[m
 Author: Adéla Novotná <adela.novotna@example.cz>
-Date:   Mon May 18 16:18:40 2020 +0200
+Date:   Mon Mar 20 14:51:34 2017 +0100
 
     Rozdělení dlouhých řádků
-
+    
     Verše básně se většinou píšou na jednotlivé řádky. Myslím, že
-    takhle se to líp čte. (Ale, co si budeme povídat, hlavní
-    důvod je ukázat co dělá git diff.)
+    takhle se to líp čte. (Ale co si budeme povídat, hlavní
+    důvod je ukázat, co dělá git diff.)
 
-␛[33mcommit eb0fcd9317cbba3d9406ffe2918dfaad667f100f␛[m
+␛[33mcommit 1a009f4267d5a6ab7ece87cb7514f5b803692e39␛[m
 Author: Adéla Novotná <adela.novotna@example.cz>
-Date:   Mon May 18 16:18:40 2020 +0200
+Date:   Mon Mar 20 14:51:34 2017 +0100
 
     První revize
 ```

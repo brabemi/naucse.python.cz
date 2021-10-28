@@ -159,7 +159,7 @@ Pokud máš adresář `Desktop` nebo `Plocha`, přejdi tam. Pak nezapomeň ově�
 Jsi-li na Linuxu nebo macOS, dej si pozor na velikost písmen: na těchto
 systémech jsou `Desktop` a `desktop` dvě různá jména.
 
-Jsi-li na Windows, `cd` už jsi používal{{a}} – tento příkaz se chová různě
+Jsi-li na Windows, `cd` už jsi používala – tento příkaz se chová různě
 podle toho, jestli něco napíšeš za něj nebo ne.
 
 {% call sidebyside() %}
@@ -333,12 +333,6 @@ Tady je tabulka základních příkazů, se kterými si zatím vystačíme:
         <td><code>del</code></td>
         <td>smazání souboru</td>
         <td><code>rm test.txt</code><br><code>del test.txt</code></td>
-    </tr>
-    <tr>
-        <td><code>rm -r</code></td>
-        <td><code>rmdir /S</code></td>
-        <td>smazání adresáře</td>
-        <td><code>rm -r test</code><br><code>rmdir /S test</code></td>
     </tr>
     <tr>
         <td><code>exit</code></td>

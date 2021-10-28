@@ -55,8 +55,6 @@ git checkout doplneni-autora
 git branch
 
 cat > basnicka.txt << END
-(Lidová)
-
 Holka modrooká
 Nesedávej u potoka
 Holka modrooká
@@ -66,6 +64,8 @@ V potoce je hastrmánek
 Zatahá tě za copánek
 Holka modrooká
 Nesedávej tam
+
+- Lidová
 END
 
 git add basnicka.txt
@@ -79,7 +79,8 @@ git checkout doplneni-jmena
 git branch
 
 cat > basnicka.txt << END
-Holka Modrooká
+Holka modrooká
+=========
 
 Holka modrooká
 Nesedávej u potoka
@@ -100,28 +101,6 @@ take_screenshot $OUTFILE.branches.png gitk --all
 git checkout master
 git merge doplneni-jmena
 git merge doplneni-autora
-git status
-cat basnicka.txt
-git diff
-
-cat > basnicka.txt << END
-Holka modrooká
-(Lidová)
-
-Holka modrooká
-Nesedávej u potoka
-Holka modrooká
-Nesedávej tam
-
-V potoce je hastrmánek
-Zatahá tě za copánek
-Holka modrooká
-Nesedávej tam
-END
-
-git add basnicka.txt
-GIT_EDITOR='true' git commit
-
 git branch
 
 take_screenshot $OUTFILE.merge.png gitk --all
